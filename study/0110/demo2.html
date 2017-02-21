@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+        /* var o = "object";
+         var i = 0;
+         if (typeof  o == "object") {
+         var j = 0;
+         for (var k = 0; k < 10; k++) {
+         console.log(k);
+         }
+         console.log(k);
+         }
+         console.log(j);*/
+        var str = "global";
+        function f() {
+//            console.log(str);
+            alert(str);
+            var str = "local";
+//            console.log(str);
+            alert(str);
+        }
+    </script>
+</head>
+<body>
+<button onclick="javascript:f()">按钮</button>
+</body>
+</html>

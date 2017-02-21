@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+        function res() {
+            var num1 = prompt("第一个数");
+            var num2 = prompt("第二个数");
+            var fuhao = prompt("请输入符号");
+              fuhao=="-"||fuhao=="+"?"-":"+";
+            document.getElementById("zhi").innerHTML = parseInt(num1) + fuhao+  parseInt(num2);
+        }
+    </script>
+</head>
+<body>
+<button id="res" onclick="res()">结果</button>
+<div id="zhi"></div>
+</body>
+</html>

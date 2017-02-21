@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+      <script src="jquery-3.0.0.min.js"></script>
+
+</head>
+<body>
+
+<table id = "test_table" border="1">
+    <tr><td><input type="checkbox" name="test"></td><td>1</td><td>2</td><td>3</td></tr>
+    <tr><td><input type="checkbox" name="test"></td><td>4</td><td>5</td><td>6</td></tr>
+    <tr><td><input type="checkbox" name="test"></td><td>7</td><td>8</td><td>9</td></tr>
+    <tr><td><input type="checkbox" name="test"></td><td>10</td><td>11</td><td>12</td></tr>
+</table>
+<input type="button" value="删除">
+<script TYPE="application/javascript">
+    $(function(){
+        $("input[type='button']").click(function() {
+            $("input[name='test']:checked").each(function() { // 遍历选中的checkbox
+                n = $(this).parents("tr").index();  // 获取checkbox所在行的顺序
+                $("table#test_table").find("tr:eq("+n+")").remove();
+            });
+        });
+    });
+</script>
+</body>
+</html>

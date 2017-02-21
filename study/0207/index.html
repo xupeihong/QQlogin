@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .bg1 {
+            background: url("img/focus.jpg");
+        }
+
+        .bg2 {
+            background: url("img/focus1.jpg");
+        }
+
+        .bg3 {
+            background: url("img/focus2.jpg");
+        }
+
+        .bg4 {
+            background: url("img/focus3.jpg");
+        }
+
+        .bg5 {
+            background: url("img/focus4.jpg");
+        }
+
+    </style>
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script type="application/javascript">
+        $(function () {
+            $("body").addClass("bg1");
+//            var i = 1;
+
+            $("button").click(function () {
+                /*i++;
+                 if (i == 5)
+                 i = 1;*/
+                var i = parseInt(Math.random() * 10 +1);
+
+                if (i >= 0 && i <= 5) {
+                    $("body").removeClass().addClass("bg" + i);
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<button>切换</button>
+
+</body>
+</html>

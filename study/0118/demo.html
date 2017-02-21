@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="application/javascript">
+    function person(name,age) {
+        this.name=name;
+        this.age=age;
+        this.result=function () {
+            if(this.age<10)
+            {
+                document.write(this.name+"免费");
+            }
+            else if(this.age>60){
+                document.write(this.name+"免费");
+            }
+            else
+            {
+                document.write(this.name+"20元");
+            }
+        }
+    }
+    var person1=new person(this.name,this.age);
+    person1.name="张三";
+    person1.age=30;
+    person1.result();
+
+</script>
+</body>
+</html>

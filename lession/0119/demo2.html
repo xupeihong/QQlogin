@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+        function  student() {
+            this.name;
+            this.height;
+            this.score;
+        }
+        var st1=new student();
+        var st2=new student();
+        var st3=new student();
+        var st4=new student();
+        var st5=new student();
+        st1.name="小红";
+        st1.height=170;
+        st1.score=98;
+        st2.name="小明";
+        st2.height=190;
+        st2.score=100;
+        st3.name="小强";
+        st3.height=178;
+        st3.score=89;
+        st4.name="小黑";
+        st4.height=185;
+        st4.score=59;
+        st5.name="晓芬";
+        st5.height=164;
+        st5.score=99;
+        var arr=[st1,st2,st3,st4,st5];
+        var max=st1;
+        var min=st1;
+            for( var i=0;i<arr.length;i++)
+            {
+                if(max.height<arr[i].height)
+                    max=arr[i];
+                if(min.height>arr[i].height)
+                    min=arr[i];
+            }
+            document.write( max.name+":"+min.name);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

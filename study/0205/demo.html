@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="change()">
+<script type="application/javascript">
+    function change() {
+        var date = new Date();
+        var h = date.getHours();
+        var m = date.getMinutes();
+        var s = date.getSeconds();
+        h = changetiem(h);
+        m = changetiem(m);
+        s = changetiem(s);
+        document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+        setTimeout("change()", 1000);
+    }
+    /*if (h < 10)
+     h= "0" + h;
+     else
+     h= h;
+     if (m < 10)
+     m= "0" + m;
+     else
+     m= m;
+     if (s < 10)
+     s= "0" + s;
+     else
+     s= s;*/
+    //待优化
+    /*function gethour(h) {
+     if (h < 10)
+     return "0" + h;
+     else
+     return h;
+     }
+     function getmin(m) {
+     if (m < 10)
+     return "0" + m;
+     else return m;
+     }
+     function getsec(s) {
+     if (s < 10)
+     return "0" + s;
+     else
+     return s;
+     }*/
+    //简化版
+    function changetiem(time) {
+        if (time < 10)
+            return "0" + time;
+        else
+            return time;
+    }
+    // var res = setTimeout(changetiem(time), 1000);
+    //document.write(changetiem(h) + ":" + changetiem(m) + ":" + changetiem(s));
+    //document.write(res);
+</script>
+<div id="txt"></div>
+</body>
+</html>

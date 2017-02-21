@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+        //混合模式
+        function result(name,age) {
+            this.name=name;
+            this.age=age;
+        }
+        result.prototype={
+            score:100,
+            say:function () {
+               alert (this.score);
+            }
+        }
+        var str=new result("李四",53);
+        str.say();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

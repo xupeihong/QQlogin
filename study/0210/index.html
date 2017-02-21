@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <style type="text/css">
+        .message {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<form action="" method="get" onclick="return check()">
+    用户名：<input type="text" name="name"><span class="message">*</span><br>
+    密 码：<input type="password" name="pwd"><span class="message">*</span><br>
+    <input type="submit" value="提交">
+</form>
+<script type="application/javascript">
+    //检查是否有空值
+    function check() {
+        //获取用户名和密码
+        var name = $("[name='name']").val();
+        var pwd = $("[name='pwd']").val();
+        //默认都是*
+        $(".message").html("*");
+        var type = true;//开关量控制所有验证元素
+        if (name == "") {
+            $("[name='name']").next().html("用户名不能为空");
+            //没有显示标签则需要创建标签span
+//            $("[name='name']").after($("<span class='message'>用户名不能为空</span>"));
+//            return false;
+            type = false;
+        }
+        if (pwd == "") {
+            $("[name='pwd']").next().html("密码不能为空");
+//            $("[name='pwd']").after($("<span class='message'>密码不能为空</span>"));
+//            return false;
+            type = false;
+        }
+        return type;
+        // return true;
+    }
+    //jq表单提交
+    /*$("form").submit(function () {
+     return check();
+     })*/
+    //获得焦点
+    $("[name='name'],[name='pwd']").focus(function () {
+        //文本框变红色
+        $(this).css("background", "red");
+        //判断给提示
+        switch ($(this)[0].name) {
+            case "name":
+                $(this).next().html("<span style='color: green'>用户名必须是汉字</span>");
+                break;
+            case "pwd":
+                $(this).next().html("<span style='color: green'>密码长度必须是六位</span>");
+                break;
+        }
+        //鼠标失去焦点
+    }).blur(function () {
+        //将文本框背景还原
+        $(this).css("background", "white");
+        //添加*
+        $(this).next().html("<span style='color: green'>√</span>");
+        //判断如果某项为空给提示
+        switch ($(this)[0].name) {
+            case "name":
+                if ($(this).val() == "") {
+                    $(this).next().html("用户名不能为空");
+                }
+                break;
+            case "pwd":
+                if ($(this).val() == "") {
+                    $(this).next().html("密码不能为空");
+                }
+                break;
+        }
+    })
+
+
+</script>
+</body>
+</html>

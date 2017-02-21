@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script type="application/javascript">
+        $(function () {
+            for (var i = 1; i <= 36; i++) {
+                var img = $("<img/>");
+                img.attr("src", "img/red" + i + ".png");
+                $(".showPic").append(img);
+            }
+            $("img:eq(0)").siblings().css("display", "none");
+            var index = 0;
+            var setInt = null;
+
+            function showCar() {
+                index++;
+                if (index == 36) {
+                    index = 0;
+                }
+                $("img:eq(" + index + ")").css("display", "block").siblings().css("display", "none");
+                $(".showBig").empty();
+                var img = $(".showPic").find("img:eq(" + index + ")").clone();
+                img.width($(".showPic").width() * 5);
+                $(".showBig").append(img);
+            }
+
+            setInt = setInterval(showCar, 1000);
+            var speed = 5;
+            $(".showPic").hover(function () {
+                clearInterval(showCar);
+            }, function () {
+                clearInterval(showCar);
+                setInt = setInterval(showCar, 1000);
+            }).mousemove(function (e) {
+                var ev = e || event;
+                var x = ev.offsetX;
+                var y = ev.offsetY;
+                $(".showBig").empty();
+                var img = $(this).find("img:eq(" + index + ")").clone();
+                img.width($(".showPic img:eq(0)").width() * 5);
+                img.css({
+                    "width": $(".showPic img").width() * speed + "px",
+                    "position": "relative",
+                    "left": "-" + (x * speed - $(".showBig").width() / 2) + "px",
+                    "top": "-" + (y * speed - $(".showBig").width() / 2) + "px"
+                });
+                $(".showBig").append(img);
+            });
+        })
+    </script>
+</head>
+<body>
+<div class="showPic"></div>
+<div class="showBig"></div>
+</body>
+</html>

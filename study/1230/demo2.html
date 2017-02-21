@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .page {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .page .header {
+            height: 100px;
+            background-color: aquamarine;
+            position: relative;
+        }
+
+        .page .header .nav {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        .page .header .nav ul {
+            list-style: none;
+        }
+
+        .page .header .nav ul li {
+            float: left;
+            width: 100px;
+            text-align: center;
+            border-bottom: 1px solid transparent;
+        }
+
+        .page .header .nav ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .page .header .nav ul li a:hover {
+            color: red;
+        }
+
+        .page .header .nav ul li .menu {
+            display: none;
+            position: absolute;
+            width: 100px;
+            background-color: lightgray;
+            padding-top: 15px;
+            float: left;
+
+        }
+
+        .page .header .nav ul li:hover .menu {
+            display: block;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="header">
+        <div class="nav">
+            <ul>
+                <li><a href="#">搜也</a></li>
+                <li><a href="#">百度</a>
+                    <ul class="menu">
+                        <li><a href="#">糯米</a></li>
+                        <li><a href="#">都是</a></li>
+                        <li><a href="#">糯米</a></li>
+                        <li><a href="#">糯米</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">搜狐</a>
+                    <ul class="menu">
+                        <li><a href="#">糯米</a></li>
+                        <li><a href="#">都是</a></li>
+                        <li><a href="#">糯米</a></li>
+                        <li><a href="#">糯米</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">搜狐</a></li>
+                <li><a href="#">搜狐</a>
+                    <ul class="menu">
+                        <li><a href="#">糯米</a></li>
+                        <li><a href="#">都是</a></li>
+                        <li><a href="#">糯米</a></li>
+                        <li><a href="#">糯米</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">搜狐</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

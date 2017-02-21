@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <!--<script src="/demo/ku/time/index.js"></script>-->
+    <script src="../../ku/time/index.js"></script>
+    <script type="application/javascript">
+        /* var time = new Date();
+         var year = time.getFullYear();
+         var moth = time.getMonth() + 1;
+         var day = time.getDate();
+         var hour = time.getHours();
+         var minils = time.getMinutes();
+         var second = time.getSeconds();
+         document.write(year + ":" + changetiem(moth) + ":" + (day) + ":" + hour + ":" + minils + ":" + changetiem(second));
+         */
+        /*var str="hello world";
+         alert(str.substring(5));*/
+        /*var arr = [];
+         for (var i = 1; i <= 10; i++) {
+         var ran = parseInt(Math.random() * 10);
+         arr.push(ran);
+         }
+         document.write(arr);*/
+        /*var stu1 = {
+         name: "小红",
+         age: "18",
+         score: "45"
+         };
+         var stu2 = {
+         name: "小芳",
+         age: "18",
+         score: "45"
+         };
+         var stu3 = {
+         name: "小明",
+         age: "18",
+         score: "45"
+         };*/
+        //var arr = [{"name": "小红", "age": "25", "score": "78"}, {}, {}];
+        /*var arr = [{
+         name: "小红",
+         age: "18",
+         score: "45"
+         }, {
+         name: "小芳",
+         age: "18",
+         score: "45"
+         }, {
+         name: "小明",
+         age: "18",
+         score: "45"
+         }];*/
+        /* arr.push(stu1);
+         arr.push(stu2);
+         arr.push(stu3);*/
+        /*   for (var i = 0; i < arr.length; i++) {
+         document.write("姓名：" + arr[i].name + "  年龄：" + arr[i].age + "分数:" + arr[i].score);
+         }*/
+        /*function person() {
+         this.name;
+         this.age;
+         this.score;
+         }
+         var stu1 = new person();
+         stu1.name = "小红";
+         stu1.age = 18;
+         stu1.score = 65;
+         var stu2 = new person();
+         stu2.name = "小芳";
+         stu2.age = 18;
+         stu2.score = 65;
+         var stu3 = new person();
+         stu3.name = "小明";
+         stu3.age = 18;
+         stu3.score = 65;
+         var arr = [stu1, stu2, stu3];
+         for (var i = 0; i < arr.length; i++) {
+         document.write(arr[i].name + ":" + arr[i].age + ":" + arr[i].score);
+         }*/
+
+        //工厂模式
+        /*function getobj() {
+         var obj = {};
+         obj.name = "李四";
+         obj.age = 56;
+         obj.score = 56;
+         return obj;
+         }
+         var res = new getobj();
+         document.write(res.name);
+         //原型模式
+         function getstu() {
+         }
+         getstu.prototype = {
+         name: "李四",
+         age: 25,
+         score: 89
+         }
+         var res = new getstu();
+         document.write(res.score);
+         //混合模式
+         function getpro(name, age) {
+         this.name = name;
+         this.age = age;
+         }
+         getpro.prototype = {
+         score: 100,
+         say: function () {
+         document.write(this.name);
+         }
+         }
+         var res=new getpro("张三",89);
+         res.say();*/
+        /* for (var i = 1; i <=100; i++) {
+         if (i % 7 == 0) {
+         document.write(i+"<br>");
+         }
+         }*/
+        /*var num = Math.floor(Math.random() * 10) + 1;
+         for (var i = 1; i < num; i++) {
+         document.write(i+",");
+         }*/
+        //       document.write(num);
+        /*  var res = parseInt(Math.random() * (max - min + 1) + min);
+         document.write(res);*/
+        /* var obj = {};
+         obj.name = "小红";
+         obj.age = 15;
+         obj.address = "beijing";
+         document.write(obj.name + obj.age + "住在" + obj.address);*/
+        /*  var arrPre = ["a", "b", "c", "d", "c", "b", "d", "f"];
+         for (num in arrPre) {
+         document.write(arrPre[num]);
+         }*/
+        /*var sum = 1;
+         for (var i = 1; i < 6; i++) {
+         sum *= i;
+         document.write(sum+"<br>");
+         }*/
+        /*var obj = [{
+         "name": "小红",
+         "subject": "语文",
+         "score": "98"
+         }, {
+         "name": "小明",
+         "subject": "语文",
+         "score": "98"
+         }]
+         for (var i = 0; i < obj.length; i++) {
+         document.write(obj[i].name + ":" + obj[i].subject + obj[i].score);
+         }*/
+
+        /*  var stringArray = ["this", "is", "jike", "Campus"];
+         for (var i = 0; i < stringArray.length; i++) {
+         document.write(stringArray[i].split(","));
+         }*/
+        //            var sum = 0;
+        /* while (i <= 100) {
+         if (i % 2 == 0) {
+         sum += i;
+         i++;
+         document.write(sum);
+         }
+         }*/
+        /* for (var i = 0; i < 100; i++) {
+         if (i % 2 == 0) {
+         sum += i;
+         }
+         }
+         document.write(sum);*/
+        /*var i=0;
+         while (i < 100) {
+         if (i % 2 == 0) {
+         sum += i;
+         i+=2;
+         }
+         }
+         document.write(sum);
+         do{
+         sum+=i;
+         i+=2;
+         }
+         while(i<100)
+         document.write(sum);*/
+
+        /* var total=50;
+         function square(num) {
+         total=num*num;
+         return num*num;
+         }
+         var number=square(10);
+         alert(total);*/
+        /*  var sum=function  (num1,num2) {
+         return num1+num2;
+         }
+         var res=sum(10,20);
+         alert(res);
+         */
+        /*var a = 1;
+         function fn1(a) {
+         alert( a );
+         a = 2;
+         }
+         fn1();
+         alert(a);*/
+        /* var arr = [];
+         var i = 1;
+         while (i <= 10) {
+         arr.push(i);
+         i++;
+         }
+         document.write(arr);*/
+        /*var arr = [1, 2, 3, 4];
+         arr.length = 2
+         document.write(arr);*/
+        var i = 0;
+        var sum = 0;
+        while (i <= 100) {
+            sum += i;
+            i++;
+        }
+        document.write(sum);
+        /*var foo = "11"+2-"1";
+         document.write(foo);
+         document.write(typeof foo);*/
+        /*var a=10, b=20 , c=30;
+         ++a;
+         a++;
+         e=++a+(++b)+(c++)+a++;
+         alert(e);*/
+        /*  var m = 1;
+         n = m++;
+         alert(m);
+         alert(n);*/
+    </script>
+</head>
+<body>
+
+</body>
+</html>

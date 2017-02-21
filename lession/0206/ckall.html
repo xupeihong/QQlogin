@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div {
+            width: 200px;
+            height: 200px;
+            overflow: scroll;
+            word-wrap: break-word; /*超出文本激动换行*/
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="txt1">
+<div id="div1"></div>
+<input type="checkbox" id="ckall">全选
+<input type="checkbox" name="ck">
+<input type="checkbox" name="ck">
+<input type="checkbox" name="ck">
+<input type="checkbox" name="ck">
+<input type="checkbox" name="ck">
+<script type="application/javascript">
+    /* document.getElementById("txt1").onkeyup = function (e) {
+     var ev = e || event;//兼容性
+     //判断如果是回车键并且文本框不是空的
+     if (ev.keyCode == 13 && this.value != "") {
+     //将文本框的值赋值给div
+     document.getElementById("div1").innerHTML += document.getElementById("txt1").value + "<br>";
+     //每次清空
+     this.value = "";
+
+     }
+     };*/
+    var ck = document.getElementsByName("ck");
+    var ckall1 = document.getElementById("ckall");
+    //全选
+    document.getElementById("ckall").onclick = function () {
+               for (var i = 0; i < ck.length; i++) {
+            ck[i].checked = this.checked;
+        }
+    };
+    //部分选中
+    for (var k = 0; k < ck.length; k++) {
+        ck[k].onclick = function () {
+            var type = true;
+            //循环遍历每个复选框，如果都选中则选中全选复选框
+            for (var k = 0; k < ck.length; k++) {
+                if (!ck[k].checked) {
+                    ckall1.checked = false;
+                    type = false;
+                    break;
+                }
+            }
+            if (type)
+                ckall1.checked = true;
+        }
+
+    }
+</script>
+</body>
+</html>

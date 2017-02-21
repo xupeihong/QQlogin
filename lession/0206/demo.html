@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+
+        .redborder {
+            border: 10px solid red;
+        }
+
+        .greenborder {
+            border: 10px solid green;
+        }
+    </style>
+</head>
+<body>
+<button id="btn1" onclick="changecolor()">换颜色</button>
+<div id="div1" class="redborder"></div>
+<script type="application/javascript">
+    /* var color = null;
+     if (document.cookie != "") {
+     var arr = document.cookie.split(";");
+     for (var i = 0; i < arr.length; i++) {
+     var key = arr[i].split("=")[0];
+     var val = arr[i].split("=")[1];
+     if (key = "color")
+     color = val;
+     break;
+     }
+     }*/
+    var type = true;
+    /*if (color != null) {
+     var div = document.getElementById("div1");
+     div.className = color;
+     if (color == "greenborder")
+     type = false;
+     }*/
+    function changecolor() {
+        var div1 = document.getElementById("div1");
+        if (type) {
+            div1.className = "greenborder";
+            document.cookie = "cookie=greenborder";
+            type = false;
+        }
+        else {
+            div1.className = "redborder";
+            document.cookie = "cookie=redborder";
+            type = true;
+        }
+    }
+    //鼠标移动动态坐标
+    document.onmousemove = function (e) {
+        var ev = e || event;//兼容性
+        var x = ev.clientX;//坐标信息
+        var y = ev.clientY;
+        //显示坐标内容
+        document.getElementById("div1").innerHTML = "x:" + x + " y:" + y;
+        //div随鼠标移动
+        document.getElementById("div1").style = "left:" + x + "px;top:" + y + "px;";
+    }
+</script>
+</body>
+</html>

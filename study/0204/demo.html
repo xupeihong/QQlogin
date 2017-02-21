@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script  type="application/javascript">
+    var c=prompt("请输入字符");
+    var code=c.charCodeAt(0);
+    //alert(code);
+    if(code<97&&code>64)
+    document.write(String.fromCharCode(code+32));
+    else if(code>96&&code<123)
+        document.write(String.fromCharCode(code-32));
+</script>
+<!--<input type="text"  readonly>-->
+</body>
+</html>

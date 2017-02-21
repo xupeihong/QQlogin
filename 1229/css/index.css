@@ -1,0 +1,21 @@
+.one, .two, .three {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+.one {
+    background-color: antiquewhite;
+    border: 20px solid red;
+    padding-left: 20px;
+    box-sizing: border-box;
+
+}
+
+.two {
+    background-color: yellow;
+}
+
+.three {
+    background-color: brown;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="application/javascript">
+    document.writeln("*<br/>");
+    document.writeln("=========<br/>");
+    for(var i=0;i<6;i++){ //打印一行6个
+        document.writeln("*");
+    }
+    document.writeln("<br/>");
+    document.writeln("=========<br/>");
+    for(var i=0;i<6;i++){ //打印6列
+        document.writeln("*<br/>");
+    }
+    document.writeln("=========<br/>");
+    for(var i=0;i<6;i++){ //打印6行6列
+        for(var j=0;j<6;j++){
+            document.writeln("*");
+        }
+        document.writeln("<br/>"); //每打印一行后就换行
+    }
+    document.writeln("=========<br/>");
+    for(var i=0;i<6;i++){
+        for(var j=0;j<=i;j++){
+            document.writeln("*");
+        }
+        document.writeln("<br/>");
+    }
+    document.writeln("=========<br/>");
+    for(var i=0;i<6;i++){
+        for(var j=0;j<i;j++){
+            document.writeln("*");
+        }
+        document.writeln("<br/>");
+    }
+    document.writeln("=========<br/>");
+    for(var i=0;i<6;i++){
+        document.writeln(" ");
+    }
+    document.writeln("*<br/>");
+    document.writeln("=========<br/>");
+    for(var i=0;i<6;i++){
+        for(var k=0;k<5;k++){
+            document.writeln(" ");
+        }
+        document.writeln("*<br/>");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: absolute;
+            left: 0px;
+        }
+    </style>
+    <script type="application/javascript">
+        window.onload = function () {
+            var str = null;
+            document.getElementById("btn").onclick = function () {
+                if (str != null)
+                    clearInterval(str);
+                str = setInterval(move, 10);//间隔10毫秒移动
+            };
+            var num = 0;
+            //移动的方法
+            function move() {
+                num++;
+                document.getElementById("div1").style = "left:" + num + "px;";
+                //超过400则返回原点
+                if (num >= 400) {
+                    //clearInterval(str);
+                    document.getElementById("div1").style = "right:" + (num) + "px;";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<button id="btn">移动</button>
+<div id="div1"></div>
+<script type="application/javascript">
+
+</script>
+</body>
+</html>

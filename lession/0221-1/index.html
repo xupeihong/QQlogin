@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style type="text/css">
+        label {
+            display: block;
+            width: 150px;
+            height: 36px;
+            line-height: 36px;
+            background: rgb(115, 38, 255);
+            text-align: center;
+            color: #fff;
+            margin: 0 auto;
+        }
+        [type="checkbox"] {
+            display: none;
+        }
+        label ul {
+            background: rgb(0, 0, 0);
+            top: 36px;
+            width: 150px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        [type="checkbox"]:checked + ul {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<label for="ck">
+    测试表单
+    <input type="checkbox" id="ck">
+    <ul>
+        <li>菜单一</li>
+        <li>菜单一</li>
+        <li>菜单一</li>
+        <li>菜单一</li>
+        <li>菜单一</li>
+        <li>菜单一</li>
+    </ul>
+</label>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="application/javascript">
+   /* var arr=[1,1,2,34,2];
+    var n=[];
+    for(var i=0;i<arr.length;i++)
+    {
+        if(n.indexof(arr[i])==-1)
+        {
+            n.push(arr[i]);
+
+        }
+
+    }*/
+
+    //alert(arr);
+
+   /*for(var j=0;j<5;j++)
+   {
+    for(var i=0;i<8;i++)
+    {
+        document.write("*"+"<br>");
+
+    }
+
+   }*/
+/*var i=0;
+    while (i<10){
+        document.write("*");
+        i++;
+    }*/
+
+/*function  getxin(k) {
+    for(var i=0;i<k;i++)
+    {
+        document.write("*");
+    }
+
+}
+getxin();
+   function gettwo() {
+
+
+       for (var k = 1; k < 9; k++) {
+           getxin(k);
+           document.write("<br>");
+       }
+   }
+   gettwo();
+
+    for(var j=1;j<1;j++)
+    {
+        gettwo();
+        document.write("<br>");
+    }*/
+
+
+   /*function printStar(col) {
+       for (var i=0; i<col; i++) {
+           var spaceArr = new Array(col - i),
+                   starArr = new Array(i + 2),
+                   space = spaceArr.join(' '),
+                   star = starArr.join('*');
+           console.log(space + star);
+       }
+   }
+   printStar(5);*/
+
+for(var j=0;j<4;j++){//4行
+   for(var i=0;i<=4-j-1;i++)//
+   {
+       document.write("&nbsp;");
+   }
+   for( var k=0;k<=(2*j-1)+1;k++)
+   {
+       document.write(" *");
+   }
+   document.write("<br>");
+}
+</script>
+</body>
+</html>

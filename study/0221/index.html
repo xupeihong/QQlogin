@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style type="text/css">
+        label {
+            display: block;
+            width: 200px;
+            height: 65px;
+            background-color: #0a88e1;
+            text-align: center;
+            line-height: 65px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        label:hover {
+            background-color: yellow;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        [type="checkbox"] {
+            display: none;
+        }
+
+        label ul {
+            position: absolute;
+            top: 65px;
+            background-color: #3D568C;
+            color: white;
+            margin: 0;
+            padding: 0;
+            width: 200px;
+        }
+
+        [type="checkbox"]:checked + ul {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<label for="ck">
+    选中影藏
+    <input type="checkbox" id="ck">
+    <ul>
+        <li>菜单一</li>
+        <li>菜单一</li>
+        <li>菜单一</li>
+        <li>菜单一</li>
+        <li>菜单一</li>
+        <li>菜单一</li>
+        <li>菜单一</li>
+    </ul>
+</label>
+</body>
+</html>

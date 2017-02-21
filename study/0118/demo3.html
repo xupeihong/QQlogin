@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+        function result() {
+            this.name;
+            this.height;
+            this.score;
+            /*this.res=function () {
+                for(var i=0;i<obj.length;i++)
+                {
+                    if(this.height>obj[i].height)
+                    {
+                        document.write(this.name);
+                    }
+                    else
+                    {
+                        document.write(this.name);
+                    }
+                }
+            }*/
+        }
+        //5个对象存放数组中
+        /*var obj=[
+            {"name":"小红","height":"170","score":"98"},
+            {"name":"小明","height":"190","score":"100"},
+            {"name":"小强","height":"178","score":"89"},
+            {"name":"小黑","height":"185","score":"59"},
+            {"name":"小芳","height":"164","score":"99"}
+            ]*/
+
+        var st1=new result();
+        st1.name="小红";
+        st1.height=170;
+        st1.score=98;
+        var st2=new result();
+        st2.name="小明";
+        st2.height=190;
+        st2.score=100;
+        var st3=new result();
+        st3.name="小强";
+        st3.height=178;
+        st3.score=89;
+        var st4=new result();
+        st4.name="小黑";
+        st4.height=185;
+        st4.score=59;
+        var st5=new result();
+        st5.name="小芳";
+        st5.height=164;
+        st5.score=99;
+        var obj=[st1,st2,st3,st4,st5];
+       /* var sum=0;
+        for(var i=0;i<obj.length;i++)
+        {
+            sum+=obj[i].score;
+        }
+        document.write(sum);*/
+var max=st1;
+var min=st1;
+for(var i=0;i<obj.length;i++)
+{
+    if(max.height<obj[i].height)
+    {
+        max=obj[i];
+    }
+    if(min.height>obj[i].height)
+    {
+        min=obj[i];
+    }
+}
+document.write(max.name+" "+min.name);
+    </script>
+</head>
+<body>
+<script type="application/javascript">
+    result();
+</script>
+</body>
+</html>

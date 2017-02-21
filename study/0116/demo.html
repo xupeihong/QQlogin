@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="application/javascript">
+    var obj=[
+   {"name":"张三","subject":"语文","score":"100"},
+    {"name":"李四","subject":"数学","score":"100"},
+    {"name":"张三","subject":"英语","score":"100"},
+   {"name":"张三","subject":"数学","score":"90"}
+    ];
+    for(var i=0;i<obj.length;i++)
+    {
+        document.write(obj[i].name+" "+obj[i].subject+" "+obj[i].score+"<br>");
+    }
+
+   /*var obj=[
+       {"name":"张三","objs":[
+           {"subject":"语文","score":"100"},
+           {"subject":"数学","score":"100"},
+           {"subject":"英语","score":"60"}
+       ]},
+       {"name":"李四","objs":[
+           {"subject":"数学","score":"100"}
+       ]}
+
+   ];
+for(var i=0;i<obj.length;i++)
+{
+    var name1=obj[i].name;
+    var res=obj[i].objs;
+    for( var j=0;j<res.length;j++)
+    {
+        document.write(name1+" "+res[j].subject+" "+res[j].score+"<br>");
+
+    }
+
+}*/
+</script>
+</body>
+</html>

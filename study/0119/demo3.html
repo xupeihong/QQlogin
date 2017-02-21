@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+        //原型继承
+       /* function  person(name,age) {
+            this.name=name;
+            this.age=age;
+        }
+        function student(name,age,score) {
+            this.score=score;
+            this.fun=function () {
+                document.write(this.name+" "+this.age+" "+this.score);
+            }
+        }
+        student.prototype=new person("张三",56);//继承父类
+        var res=new student("fdfd",23,89);//实例化学生对象
+        res.fun();//调用*/
+
+
+       //构造函数继承
+      function  person(name,age) {
+          this.name=name;
+          this.age=age;
+      }
+      //学生子类
+        function  student(name,age,score) {
+          person.apply(this,[name,age]);
+            this.score=score;
+            this.fun=function () {
+                document.write(this.name+" "+this.age+" "+this.score+"<br>");
+            }
+        }
+        //实例化
+        var stu=new student("李四",23,100);
+          stu.fun();
+
+          //老师子类
+      function  teacher(name,age,hour) {
+          person.call(this,name,age);
+          this.hour=hour;
+          this.fun=function () {
+              document.write(this.name+" "+this.age+" "+this.hour);
+          }
+      }
+      var tes=new teacher("王五",56,2);
+      tes.fun();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

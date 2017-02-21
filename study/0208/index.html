@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .div1 {
+            width: 200px;
+            height: 200px;
+            margin: 0px auto;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+
+        .show {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border: 1px solid black;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+
+        img {
+            /* width: 200px;
+             height: 200px;*/
+            position: relative;
+        }
+    </style>
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script type="application/javascript">
+        $(function () {
+            /*$("img").dblclick(function () {
+             $(this).animate({"top": "-100px", "left": "-100px", "width": "400px", "height": "400px"}, 1000);
+             })*/
+            var speed = 2;
+            $(".div1").mousemove(function (e) {
+                var ev = e || event;
+                var x = ev.offsetX;
+                var y = ev.offsetY;
+                var obj = $(".div1 img").clone();
+                obj.css({
+                    "width": $(".div1 img").width() * speed + "px",
+                    "position": "relative",
+                    "left": "-" + (x * speed - $(".show").width() / 2) + "px",
+                    "top": "-" + (y * speed - $(".show").width() / 2) + "px"
+                });
+                $(".show").empty().append(obj);
+            })
+        })
+    </script>
+
+</head>
+<body>
+<div class="div1"><img src="img/focus.jpg" alt=""></div>
+<div class="show"></div>
+</body>
+</html>

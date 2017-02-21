@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--输入三个年级 每个年级 每班5个学生的成绩
+*  放在数组中
+*  输出所有学生的总成绩、平均分-->
+<script type="application/javascript">
+    function getclassscore() {
+        var arr = []//存放成绩
+        var i = 0;
+        var sum = 0;
+        while (i < 5) {
+            var score = 1 * prompt("输入成绩");
+            arr.push(score);
+            sum += score;
+            i++;
+        }
+        return sum;
+        document.write("总成绩：" + sum + "<br/>");
+        document.write("平均分：" + sum / scores.length + "<br/>");
+    }
+    function getgratescore() {
+        var k = 0;
+        var sum = 0;
+        while (k < 3) {
+            var socre = getclassscore();
+            sum += socre;
+            k++;
+        }
+        document.write("总分：" + sum + "<br>");
+        //document.write("平均分：" + sum / arr.length);
+    }
+    //var j = 0;
+    var sum = 0;
+   // while (j < 3) {
+        var sc = getgratescore();
+        sum += sc;
+       // j++;
+   // }
+
+</script>
+</body>
+</html>

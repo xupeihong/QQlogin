@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="tou">头
+<input type="text" id="foot">足
+<button id="btn">获取结果</button>
+<div id="div1"></div>
+<script type="application/javascript">
+    function getanimate(head, foot) {
+        var c = 0;//鸡数量
+        var r = 0;//兔数量
+        var type = true;
+        while (r < head) {
+            c = head - r;//鸡头=总数-兔头
+            if (c * 2 + r * 4 == foot) {
+                type = false;
+                return "鸡：" + c + "兔：" + r;
+            }
+            r++;
+        }
+        if (type)
+            return ("数字不对");
+    }
+    document.getElementById("btn").onclick = function () {
+        var head = 1 * document.getElementById("tou").value;
+        var foot = 1 * document.getElementById("foot").value;
+        document.getElementById("div1").innerHTML = getanimate(head, foot);
+    }
+</script>
+</body>
+</html>

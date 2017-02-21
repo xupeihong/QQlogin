@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<script type="application/javascript">
+    var speedx = 0;
+    var speedy = 0;
+    var type = false;
+    //鼠标按下
+    document.getElementById("div1").onmousedown = function (e) {
+        var ev = e || event;
+        var x = ev.offsetX;//最开始的坐标
+        var y = ev.offsetY;
+        speedx = x;
+        speedy = y;
+        type = true;
+    }
+    //鼠标松开
+    document.getElementById("div1").onmouseup = function () {
+        type = false;
+    }
+    //鼠标点击移动
+    document.getElementById("div1").onmousemove = function (e) {
+        if (type) {
+            var ev = e || event;
+            var x = ev.clientX - speedx;//获取动态的坐标点
+            var y = ev.clientY - speedy;
+            document.getElementById("div1").style = "left:" + x + "px;top:" + y + "px";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+        //案例1
+        /*  var score = prompt("js输入成绩");
+         var score2 = prompt("html输入成绩");
+         if (score > 90 && score2 > 95 || score == 100 && score2 > 90)
+         alert("奖励钻戒一枚");
+
+         else
+         alert("惩罚付钱");*/
+        //案例2
+        /*var money = prompt("输入存款金额");
+         if (money >= 1000)
+         alert("劳斯莱斯");
+         else if (money >= 500 && money < 1000)
+         alert("宝马");
+         else if (money >= 100 && money < 500)
+         alert("金杯");
+         else if (money >= 10 && money < 100)
+         alert("奥拓");
+         else if (money >= 1 && money < 10)
+         alert("捷安特");
+         else
+         alert("走路");*/
+        //案例3
+        /*var rank = prompt("输入名次");
+         if (rank == "第一名")
+         alert("欧洲七国一日游");
+         else if (rank == "第二名")
+         alert("新马泰一日游");
+         else if (rank == "第三名")
+         alert("笔记本");
+         else
+         alert("肥皂");
+         switch (rank) {
+         case 1:
+         alert("");
+         break;
+         default :
+         alert("");
+         break;
+         }*/
+        //案例4
+        /*  var week = parseInt(prompt("输入周几"));
+         switch (week) {
+         case 1:
+         case 2:
+         alert("鱼香肉丝");
+         break;
+         case 3:
+         case 4:
+         alert("水煮鱼");
+         break;
+         case 5:
+         case 6:
+         alert("宫保鸡丁");
+         break;
+         case 7:
+         alert("啤酒免费");
+         break;
+         }*/
+        //作业1
+
+        function getscore() {
+            var score = prompt("打分等级");
+            alert(score);
+            switch (score) {
+                case "A":
+                    alert("90-100分");
+                    break;
+                case "B":
+                    alert("80-90分");
+                    break;
+                case "C":
+                    alert("70-80分");
+                    break;
+                case "D":
+                    alert("60-70分");
+                    break;
+                case "E":
+                    alert("60分以下");
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="dengji">
+<button id="btn">按钮</button>
+<div id="result"></div>
+<script type="application/javascript">
+    document.getElementById("btn").onclick = function () {
+        document.getElementById("result").innerHTML = getscore();
+    }
+</script>
+</body>
+</html>

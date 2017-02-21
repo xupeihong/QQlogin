@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="application/javascript">
+    var arr=["a","b","c","d","c","b","d","f"];
+    var newarr=[];//存放不重复元素的数组
+    var count=[];//记录重复元素的元素和索引值
+    for(var i=0;i<arr.length;i++)
+    {
+        var type=true;
+        for(var j=0;j<newarr.length;j++)
+        {
+            if(newarr[j]==arr[i]){
+             type=false;
+                var typeC=true;
+                for(var k=0;k<count.length;k++)
+                {
+                    if(count[k][0]==arr[i])
+                    {
+                        count[k][1]++;
+                        typeC=false;
+                        break;
+                    }
+                }
+                if(typeC){
+                    count.push([arr[i],1]);
+                }
+                document.write(arr[i]+" "+i+"<br>");
+                break;
+            }
+        }
+        if(type)
+        {
+            newarr.push(arr[i]);
+        }
+    }
+    document.write(newarr+"<br>");
+    document.write(count);
+
+   /*var arr=["a","b","c","d","c","b","d","f"];
+   var res=[];
+   var res2=[];
+    for(var i=0;i<arr.length;i++)
+    {
+        if(res.indexOf(arr[i])==-1)
+        {
+            res.push(arr[i]);
+        }
+        else{
+            res2.push(arr[i]);
+            document.write(res2[i]+" "+i+"<br>");
+        }
+    }
+    document.write(res+"<br>");*/
+
+</script>
+
+</body>
+</html>

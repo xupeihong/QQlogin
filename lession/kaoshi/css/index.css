@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    width: 520px;
+    height: 230px;
+    border: 1px solid black;
+    margin: 10px auto;
+}
+
+.head {
+    margin: 10px 10px 0 10px;
+}
+
+.main .head {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.main .head a {
+    text-decoration: none;
+    color: gainsboro;
+}
+
+.main .head span a:hover {
+    color: orange;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.ban {
+    float: right;
+}
+
+/*.ban a {
+    display: block;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    float: right;
+    border: 1px solid darkgray;
+}*/
+
+.banner {
+    margin-top: 20px;
+    margin-left: 5px;
+    position: relative;
+}
+
+.img1, .content, .img2 {
+    float: left;
+    cursor: pointer;
+}
+
+.img1, .img2 {
+    width: 30px;
+    height: 138px;
+    border: 1px solid darkgray;
+
+}
+
+.img1 {
+    border-right: none;
+}
+
+.img2 {
+    border-left: none;
+}
+
+.img1 img, .img2 img {
+    margin-top: 50px;
+}
+
+.content {
+    width: 442px;
+    height: 138px;
+}
+
+.foot {
+    clear: both;
+    width: 502px;
+    height: 43px;
+    text-align: center;
+    border: 1px solid lightgray;
+    margin-left: 5px;
+}
+
+.foot ul li {
+    list-style: none;
+    float: left;
+    padding-left: 5px;
+}
+
+.content img {
+    display: none;
+}
+
+.expreo {
+    height: 20px;
+    float: left;
+    clear: both;
+    color: black;
+}
+
+.expreo a {
+    float: left;
+    font-weight: 100;
+    font-size: 5px;
+    display: none;
+    color: black;
+}

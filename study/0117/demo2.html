@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="application/javascript">
+    /*var str="zhangjie@126.com";
+    var str2=str.lastIndexOf("@");
+    var res=str*/
+  /* var str2=str.lastIndexOf("@");
+    var str3=str.substring(str2,str.length);//@126.com
+    var res=str.split("@");
+    var res2=res[res.length-1];
+    var res3=str.lastIndexOf(".");
+    var res4=str.substring(res3);//.com*/
+    //alert(str2);
+    //var phone="16392860853";//new Number(prompt("输入电话号码"));
+    var phone=prompt("输入电话号码");
+    var res=phone.substring(0,3);
+
+    if((phone.length==11)&&(res=="153"))
+    {
+        alert("成功");
+    }
+    else
+    {
+        alert("失败");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+        function  student(name,age) {
+            this.name=name;
+            this.age=age;
+            this.res=function (vale) {
+                if(vale<0||vale>100)
+                    age=20;
+                else
+                    age=vale;
+            }
+            this.getval=function () {
+                return age;
+            }
+        }
+        var fd=new student("李四",52);
+        fd.age=10;
+        fd.res(10);
+        fd.getval();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

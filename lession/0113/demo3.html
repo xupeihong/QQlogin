@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="application/javascript">
+    var a=1,b=0;
+    while (a<=100){
+        if(a%2==0){
+            if(b%20==0){
+                document.write("<br>第"+parseInt(b/20+1)+"行偶数"+"<br>");
+            }
+            document.write(a+"&nbsp"+"&nbsp");
+            b++;//行数
+        }
+        a++;
+    }
+</script>
+</body>
+</html>

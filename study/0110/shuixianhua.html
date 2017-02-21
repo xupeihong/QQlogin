@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+        /*    for (var i = 0; i <= 999; i++) {
+         var bai = parseInt(i / 100);
+         var shi = parseInt(i % 100 / 10)
+         var ge = i % 10;
+         if (Math.pow(bai, 3) + Math.pow(shi, 3)  + Math.pow(ge, 3)==i) {
+         //                document.write(i);
+         console.log(i);
+         }
+         }*/
+        //三角形
+        document.write("*<br>");
+        for (var i = 1; i <= 15; i++) {
+            for (var j = 1; j <= i; j++) {
+                document.write("**");
+            }
+            document.write("<br>");
+        }
+
+        //        99乘法表
+        var i, j;
+
+        for (i = 1; i < 10; i++) {
+
+            for (j = 1; j <= i; j++) {
+
+                document.write(j);
+
+                document.write('*');
+
+                document.write(i);
+
+                document.write('=');
+
+                document.write(i * j);
+
+                document.write('&nbsp;');
+
+            }
+
+            document.write('<br/>');
+
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

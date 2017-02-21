@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="head">头
+<input type="text" id="foot">足
+<button id="btn" >计算</button>
+<div id="div"></div>
+<script type="application/javascript">
+    function getnum1(head,foot) {
+    var ji=0;
+    var tu=0;
+    while (ji<head){
+        tu=head-ji;
+        if(2*ji+4*tu==foot)
+        {
+            return ("鸡"+ji+"只,兔子"+tu+"只");
+        }
+        ji++;
+        }
+           return ( "数据有问题");
+       }
+           document.getElementById("btn").onclick=function () {
+               var h=1*document.getElementById("head").value;
+               var f=1*document.getElementById("foot").value;
+               var res=getnum1(h,f);
+               document.getElementById("div").innerHTML=res;
+           }
+
+</script>
+</body>
+</html>

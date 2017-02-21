@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="application/javascript">
+    //模板
+    function person() {
+        this.name;
+        this.age;
+        //模板中的动作
+        this.money=function () {
+            if(this.age<10)
+                document.write(this.name+"免费");
+            else if(this.age>60)
+                document.write(this.name+"免费");
+            else
+                document.write(this.name+"20元");
+        }
+    }
+    //创建对象
+    var per1=new person();
+    per1.name="张三";
+    per1.age=63;
+    per1.money();
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="application/javascript">
+    //工厂模式
+    function getobj() {
+        var obj = {};
+        obj.name = "李四";
+        obj.age = 34;
+        obj.score = 90;
+        return obj;
+    }
+    var res = new getobj();
+    document.write(res.name);
+    //原型模式
+    //混合模式
+</script>
+</body>
+</html>

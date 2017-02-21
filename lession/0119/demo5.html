@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script  type="application/javascript">
+       // var str="15392860853";
+        //var num=[153,186,155];
+        String.prototype.myphone=function () {
+            var num=[153,186,155];
+            var str=this;
+            if(str.length!=11)
+                return false;
+            if(isNaN(str))
+                return false;
+            if(num!=null){
+                var type=true;
+                for(var i=0;i<num.length;i++)
+                {
+                    if(num[i]==str.substring(0,3))
+                    {
+                        type=false;
+                        break;
+                    }
+                }
+                if(type)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        if("15326532541".myphone()){
+            document.write("格式正确");
+        }else{
+            document.write("格式错误");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+        // var r = 5;
+        //var pi = 3.14;
+        function result(num1, num2) {
+            // res = document.getElementById("name").value;
+//            alert(Math.PI * res * res);
+            document.getElementById("res").innerHTML =
+                    parseInt(document.getElementById("num1").value) + parseInt(document.getElementById("num2").value);
+        }
+        //function result() {
+        //  var r = 5;
+        //  alert(Math.PI * r * r);
+
+        //            alert("hello");
+        //}
+        //        alert(true+{});
+
+    </script>
+</head>
+<body>
+<input type="text" value="" id="num1">+<input type="text" id="num2">
+<button onclick="result(num1,num2)">按钮</button>
+<div id="res"></div>
+</body>
+</html>
